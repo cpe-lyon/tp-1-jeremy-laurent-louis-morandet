@@ -161,30 +161,48 @@ Permet de créer un raccourci vers le fichier
 
 **QUESTION 15:** *Que fait la commande dmesg | less ?*
 
+Ce fichier contient l'ensemble des utilisateurs et leurs informations (mot de passe, numéro...). On utilise man 5 passwd pour afficher le manuel.
+
 
 **QUESTION 16:** *Affichez à l’écran le fichier /etc/passwd ; que contient-il ? Quelle commande permet d’afficher la page de manuel de ce fichier ?*
 
+La commande 'dmesg|less' affiche la sortie de la premiere commande dans less qui permet l'affiche plus claire et lisible.
 
 **QUESTION 17:** *Affichez seulement la première colonne triée par ordre alphabétique inverse*
 
+    sort -d -r --> permet de trier par ordre alphabétique inversé.
 
 **QUESTION 18:** *Quelle commande nous donne le nombre d’utilisateurs ayant un compte sur cette machine (pas seulement les utilisateurs connectés) ?*
 
+     wc /etc/passwd --> affiche le nombre d'utilisateurs.
 
 **QUESTION 19:** *Combien de pages de manuel comportent le mot-clé conversion dans leur description ?*
 
+    man -k conversion | wc -l -> Permet d'afficher le nombre de page contenant la chaîne de caractère "conversion".
 
 **QUESTION 20:** *A l’aide de la commande find, recherchez tous les fichiers se nommant passwd présents sur la machine*
 
-
+    sudo find / -name "passwd" | wc  -l --> Affiche le nombre de fichier dont le nom du fichier contient la chaine de caractère "passwd".
+    
 **QUESTION 21:** *Modifiez la commande précédente pour que la liste des fichiers trouvés soit enregistrée dans le fichier ~/list_passwd_files.txt et que les erreurs soient redirigées vers le fichier spécial /dev/null*
 
+    find / -name 'passwd' > file.txt 2>/dev/null 
 
 **QUESTION 22:** *Dans votre dossier personnel, utilisez la commande grep pour chercher où est défini l’alias ll vu précédemment*
 
+    cat .bashrc | grep ll
 
 **QUESTION 23:** *Utilisez la commande locate pour trouver le fichier history.log.*
 
+    locate history.log
+    
+Attention le package n'est pas installé de base
 
 **QUESTION 24:** *Créer un fichier dans votre dossier personnel puis utilisez locate pour le trouver. Apparaît-il ? Pourquoi ?*
+
+    locate -a testDeFichier (aucun résultats) 
+    
+Locate génère une sorte de base de donnée pour rechercher des fichiers... Il faut mettre à jours cette base de données manuellemenent pour que locate puisse trouver notre fichier. Il faut faire : 
+    
+    updatedb.
 
