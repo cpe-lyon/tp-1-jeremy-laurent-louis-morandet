@@ -129,18 +129,35 @@ créer un fichier nommée plop dont est:
 
 **QUESTION 10:** *A quoi sert la commande file ? Essayez la sur des fichiers de types différents.*
 
+ Permet de donner le type de fichier
 
 **QUESTION 11:** *Créez un fichier toto qui contient la chaîne Hello Toto ! ; créer ensuite un lien titi vers ce fichier avec la commande ln toto titi. Modifiez à présent le contenu de toto et affichez le contenu de titi : qu’observe-t-on ? Supprimez le fichier toto ; quelle conséquence cela a-t-il sur titi ?*
 
+Permet de créer un lien vers le contenue du fichier (reference)
 
 **QUESTION 12:** *Créez à présent un lien symbolique tutu sur titi avec la commande ln -s titi tutu. Modifiez le contenu de titi ; quelle conséquence pour tutu ? Et inversement ? Supprimez le fichier titi ; quelle conséquence cela a-t-il sur tutu ?*
 
+Permet de créer un raccourci vers le fichier
 
-**QUESTION 13:** *Affichez à l’écran le fichier /var/log/syslog. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran ?*
+**QUESTION 13:** *Affichez à l’écran le fichier. Quels raccourcis clavier permettent d’interrompre et reprendre le défilement à l’écran ?*
+
+    
+    cat nomfichier
+    
+    CTRL + S --> stopper le défilement
+    CTRL + Q --> reprendre le défilement
+    
+    CTRL + Z --> Mettre en pause un programme
+    bg //redemare l'execution en arriere plan
+    fg //remet le proggrame au premier plan
 
 
 **QUESTION 14:** *Affichez les 5 premières lignes du fichier /var/log/syslog, puis les 15 dernières, puis seulement les lignes 10 à 20.*
 
+    head -n 5 /var/log/syslog  --> X première lignes
+    sed -n '10,15p' /var/log/syslog --> intervale [X Y] lignes
+    tail -n 15 /var/log/syslog --> X dernière lignes
+    
 
 **QUESTION 15:** *Que fait la commande dmesg | less ?*
 
