@@ -219,12 +219,29 @@ Locate génère une sorte de base de donnée pour rechercher des fichiers... Il 
 
 **QUESTION 3:** *Déplacer les 10 premières lignes à la fin du fichier*
 
-    10dd
+    Ctrl+ _ ligne 1 Alt + A Ctrl + _ ligne 10 Ctrl + k (allez à la fin de la ligne) Ctrl + Fin Ctrl + U
 
 **QUESTION 4:** *Annulez cette action*
 
-    CTRL + R
+    CTRL + R OU Alt+U
 
 **QUESTION 5:** *Enregistrez le fichier avant de quitter nano*
 
-    ZZ ou  :qw
+    ZZ ou  :qw ou CTRL +X + Y
+    
+## Personnalisation du shell
+**QUESTION 1:** *Commencez par créer une copie de ce fichier, que vous appellerez .bashrc_bak*
+
+    cp ~/.bashrc ~/.bashrc_bak
+    
+**QUESTION 2:** *Editez le fichier .bashrc avec nano et décommentez la ligne force_color_prompt=yes pour activer la couleur. Enregistrez le fichier et quittez nano.*
+
+
+
+**QUESTION 3:** *Le fichier .bashrc est lu au démarrage du shell ; pour le recharger, il faudrait donc se déconnecter puis se reconnecter ; mais il existe un autre moyen : la commande source .bashrc. Testez-la, l’invite de commande devrait immédiatement passer en couleurs.*
+
+
+
+**QUESTION 4:** *Les couleurs par défauts (surtout celle du dossier courant) ne sont pas très visibles. Dans .bashrc, cherchez les lignes commençant par PS1= ; elles indiquent la mise en forme de l’invite de commande (selon que l’on est en couleurs ou non). Sur cette ligne, on peut distinguer un certain nombre de raccourcis*
+
+
