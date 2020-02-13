@@ -206,3 +206,25 @@ Locate génère une sorte de base de donnée pour rechercher des fichiers... Il 
     
     updatedb.
 
+## Découverte de l’éditeur de texte nano
+**QUESTION 1:** *Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec nano*
+
+    cd
+    cp /var/log/syslog log.txt
+    nano log.txt
+
+**QUESTION 2:** *Remplacez toutes les occurrences du mot kernel par le mot noyau*
+
+    CTRL + ALT GR + \
+
+**QUESTION 3:** *Déplacer les 10 premières lignes à la fin du fichier*
+
+    10dd
+
+**QUESTION 4:** *Annulez cette action*
+
+    CTRL + R
+
+**QUESTION 5:** *Enregistrez le fichier avant de quitter nano*
+
+    ZZ ou  :qw
