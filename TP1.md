@@ -206,7 +206,8 @@ Locate génère une sorte de base de donnée pour rechercher des fichiers... Il 
     
     updatedb.
 
-## Découverte de l’éditeur de texte nano
+## Exercice 3
+### Découverte de l’éditeur de texte nano
 **QUESTION 1:** *Copiez le fichier /var/log/syslog dans votre dossier personnel sous le nom log.txt, puis ouvrez-le avec nano*
 
     cd
@@ -228,8 +229,9 @@ Locate génère une sorte de base de donnée pour rechercher des fichiers... Il 
 **QUESTION 5:** *Enregistrez le fichier avant de quitter nano*
 
     ZZ ou  :qw ou CTRL +X + Y
-    
-## Personnalisation du shell
+
+## Exercice 4
+### Personnalisation du shell
 **QUESTION 1:** *Commencez par créer une copie de ce fichier, que vous appellerez .bashrc_bak*
 
     cp ~/.bashrc ~/.bashrc_bak
